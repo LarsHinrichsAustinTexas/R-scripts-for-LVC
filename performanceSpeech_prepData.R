@@ -74,7 +74,6 @@ ooBadNorm <- subset(ooBad, normOrPerf == "normal")
 
 
 ## 4-way plot of F2delta by following environment
-## Erica - you might want to pretty these up in ggplot2
 par(mfrow=c(2,2))
 plot(ooGoodPerf$post_sound_label_2, ooGoodPerf$F2delta, main = "Good, performance")
 plot(ooGoodNorm$post_sound_label_2, ooGoodNorm$F2delta, main = "Good, non-performance")
