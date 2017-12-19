@@ -1,11 +1,11 @@
 
-##########################################################
+####################################################################
 # Analyze Vowels from a .wav file via a forced-aligned TextGrid          
 # created using FAVE (fave.ling.upenn.edu)                                 
 # This script April 2012 by Lars Hinrichs, Doug Bigham, Kate Points
 # based on scripts by Robert Felty and Mietta Lennes
-# contact: lh@utexas.edu, www.lars-hinrichs.net  
-##########################################################
+# contact: lh@utexas.edu 
+####################################################################
 
 
 
@@ -27,7 +27,7 @@ clearinfo
 # VALUES TO SET MANUALLY
 printline speaker	vowel	word	nucleusF1	nucleusF2	nucleusF3	midF1	midF2	midF3	glideF1	glideF2	glideF3	preSegment	folSegment	file	begin	duration
 
-speaker$ = "Pastor Paul"
+speaker$ = "NameOfSpeaker"
 #gender$ = "male"
 #region$ = "ET"
 
@@ -38,6 +38,8 @@ tierForWord = 2
 
 select Sound 'use_sound$'
 To Formant (burg)... 0 5 5000 0.025 50
+# Note: These values work best for (adult) male speakers. If speaker has a higher voice,
+# change the third value from 5000 to 5500.
 
 
 
@@ -97,9 +99,5 @@ endfor
 
 select Formant 'use_sound$'
 Remove
-#select Sound 'use_sound$'
-#Remove
-#select TextGrid 'use_TextGrid$'
-#Remove
 
 
